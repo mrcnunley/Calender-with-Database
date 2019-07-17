@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.CustomerController">
+   <children>
+      <Label fx:id="labelCustomerpage" layoutX="23.0" layoutY="22.0" text="Customer">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <VBox alignment="TOP_CENTER" layoutX="154.0" layoutY="14.0" prefHeight="108.0" prefWidth="292.0">
+         <children>
+            <Label fx:id="labelSelect" text="Select" />
+            <ComboBox fx:id="comboCustomer" onAction="#getCustomerInformation" prefHeight="25.0" prefWidth="213.0" visibleRowCount="50">
+               <VBox.margin>
+                  <Insets bottom="35.0" />
+               </VBox.margin>
+            </ComboBox>
+            <Label fx:id="labelNewCustomer" text="New Customer" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="123.0" layoutY="292.0" prefHeight="95.0" prefWidth="362.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="35.0" prefWidth="390.0">
+               <children>
+                  <Button fx:id="buttonSave" mnemonicParsing="false" onAction="#buttonSave" text="Save">
+                     <HBox.margin>
+                        <Insets right="25.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="buttonModify" mnemonicParsing="false" onAction="#buttonModify" text="Modify">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="buttonDelete" mnemonicParsing="false" onAction="#buttonDelete" text="Delete">
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="32.0" prefWidth="362.0">
+               <children>
+                  <Button fx:id="buttonReturn" mnemonicParsing="false" onAction="#buttonMainMenu" text="Return" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <TextField fx:id="textCustomerName" layoutX="118.0" layoutY="136.0" onKeyTyped="#changeMade" />
+      <TextField fx:id="textPhone" layoutX="319.0" layoutY="134.0" onKeyTyped="#changeMade" />
+      <TextField fx:id="textAddress" layoutX="43.0" layoutY="199.0" onKeyTyped="#changeMade" prefHeight="25.0" prefWidth="239.0" />
+      <TextField fx:id="textCity" layoutX="303.0" layoutY="199.0" onKeyTyped="#changeMade" prefHeight="25.0" prefWidth="132.0" />
+      <TextField fx:id="textPostal" layoutX="454.0" layoutY="199.0" onKeyTyped="#changeMade" prefHeight="25.0" prefWidth="85.0" />
+      <TextField fx:id="textCountry" layoutX="319.0" layoutY="263.0" onKeyTyped="#changeMade" />
+      <Label fx:id="labelName" layoutX="118.0" layoutY="117.0" text="Name" />
+      <Label fx:id="labelPhone" layoutX="319.0" layoutY="117.0" text="Phone" />
+      <Label fx:id="labelAddress" layoutX="43.0" layoutY="182.0" text="Address" />
+      <Label fx:id="labelCity" layoutX="304.0" layoutY="182.0" text="City" />
+      <Label fx:id="labelPostalCode" layoutX="455.0" layoutY="182.0" text="Postal Code" />
+      <Label fx:id="labelCountry" layoutX="321.0" layoutY="246.0" text="Country" />
+      <Label fx:id="labelAddress2" layoutX="43.0" layoutY="246.0" text="Address2" />
+      <TextField fx:id="textAddress2" layoutX="44.0" layoutY="263.0" onKeyTyped="#changeMade" prefHeight="25.0" prefWidth="239.0" />
+   </children>
+</AnchorPane>

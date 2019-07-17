@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="380.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.ReportsController">
+   <children>
+      <HBox alignment="CENTER" layoutX="197.0" layoutY="335.0" prefHeight="30.0" prefWidth="206.0">
+         <children>
+            <Button fx:id="buttonReturn" mnemonicParsing="false" onAction="#buttonMainMenu" text="Return" />
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" layoutX="159.0" layoutY="252.0" prefHeight="65.0" prefWidth="284.0">
+         <children>
+            <RadioButton fx:id="radioType" mnemonicParsing="false" text="Type">
+               <toggleGroup>
+                  <ToggleGroup fx:id="Reports" />
+               </toggleGroup>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="radioConsultant" mnemonicParsing="false" text="Consultant" toggleGroup="$Reports">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="radioCurrent" mnemonicParsing="false" text="Current" toggleGroup="$Reports" />
+         </children>
+      </VBox>
+      <Label fx:id="labelReports" layoutX="11.0" layoutY="10.0" text="Reports">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableReport" layoutX="14.0" layoutY="45.0" prefHeight="200.0" prefWidth="573.0" />
+   </children>
+</AnchorPane>

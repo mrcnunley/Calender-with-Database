@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="525.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.AppointmentController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="224.0" layoutY="476.0" prefHeight="32.0" prefWidth="119.0">
+         <children>
+            <Button fx:id="buttonReturn" mnemonicParsing="false" onAction="#buttonMainMenu" text="Return" />
+         </children>
+      </VBox>
+      <HBox alignment="TOP_CENTER" layoutX="143.0" layoutY="428.0" prefHeight="32.0" prefWidth="290.0">
+         <children>
+            <Button fx:id="buttonSave" mnemonicParsing="false" onAction="#buttonSave" text="Save" />
+            <Button fx:id="buttonModify" mnemonicParsing="false" onAction="#buttonModify" text="Modify">
+               <HBox.margin>
+                  <Insets left="25.0" right="25.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="buttonDelete" mnemonicParsing="false" onAction="#buttonDelete" text="Delete" />
+         </children>
+      </HBox>
+      <Label fx:id="labelAppointment" layoutX="14.0" layoutY="14.0" text="Appointment">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableAppointment" layoutX="41.0" layoutY="50.0" onMouseClicked="#getAppointmentInformation" prefHeight="158.0" prefWidth="521.0">
+        <columns>
+          <TableColumn prefWidth="167.0" text="Title" />
+          <TableColumn prefWidth="132.0" text="Location" />
+            <TableColumn prefWidth="110.0" text="Date" />
+            <TableColumn prefWidth="110.0" text="Start" />
+        </columns>
+      </TableView>
+      <VBox alignment="CENTER" layoutX="179.0" layoutY="24.0" prefHeight="25.0" prefWidth="257.0">
+         <children>
+            <Label fx:id="labelCurrent" text="Current" />
+         </children>
+      </VBox>
+      <TextField fx:id="textTitle" layoutX="218.0" layoutY="227.0" onKeyTyped="#changeMade" />
+      <TextField fx:id="textDescription" layoutX="219.0" layoutY="274.0" onKeyTyped="#changeMade" />
+      <TextField fx:id="textLocation" layoutX="414.0" layoutY="227.0" onKeyTyped="#changeMade" />
+      <TextField fx:id="textContact" layoutX="414.0" layoutY="319.0" onKeyTyped="#changeMade" />
+      <TextField fx:id="textURL" layoutX="414.0" layoutY="274.0" onKeyTyped="#changeMade" />
+      <ComboBox fx:id="comboCustomer" layoutX="41.0" layoutY="227.0" onMouseClicked="#nameChanged" prefWidth="150.0" />
+      <Label fx:id="labelCustomer" layoutX="39.0" layoutY="210.0" text="Customer" />
+      <Label fx:id="labelTitle" layoutX="218.0" layoutY="210.0" text="Title" />
+      <Label fx:id="labelContact" layoutX="425.0" layoutY="299.0" text="Contact" />
+      <Label fx:id="labelDescription" layoutX="219.0" layoutY="254.0" text="Description" />
+      <Label fx:id="labelURL" layoutX="414.0" layoutY="254.0" text="URL" />
+      <Label fx:id="labelLocation" layoutX="413.0" layoutY="210.0" text="Location" />
+      <Label fx:id="labelType" layoutX="41.0" layoutY="254.0" text="Type" />
+      <ComboBox fx:id="comboType" layoutX="41.0" layoutY="274.0" onMouseClicked="#typeChanged" prefWidth="150.0" />
+      <Label fx:id="labelDate" layoutX="42.0" layoutY="303.0" text="Date:" />
+      <Label fx:id="labelStartTime" layoutX="217.0" layoutY="299.0" text="Start" />
+      <Label fx:id="labelEndTime" layoutX="314.0" layoutY="301.0" text="End" />
+      <ComboBox fx:id="comboStart" layoutX="219.0" layoutY="319.0" onMouseClicked="#startChanged" prefHeight="25.0" prefWidth="84.0" />
+      <ComboBox fx:id="comboEnd" layoutX="315.0" layoutY="319.0" onMouseClicked="#endChanged" prefHeight="25.0" prefWidth="84.0" />
+      <DatePicker fx:id="dpDate" layoutX="35.0" layoutY="319.0" onKeyTyped="#changeMade" onMouseClicked="#dateChanged" />
+   </children>
+</AnchorPane>
